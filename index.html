@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Иконочый шрифт-->
+	<link rel="stylesheet" href="css/iconsfont.css">
+	<!--Фавиконки-->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="img/favicons/site.webmanifest"> 
+	<!--Подключение библиотеки Leaflet-->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+    <!--Подключение слайдера-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+	<!--Стили-->
+	<link rel="stylesheet" href="css/style.css">
+	<title>Moon River</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			<div class="header">
+				<div class="container">
+					<div class="header__body">
+						<div class="header__logo">
+							<a href="#"><img id="header__img" src="img/logo.svg" alt="Логотип"></a>
+						</div>
+						<div class="header__menu menu-header">
+							<div class="menu-header__menu">
+								<ul class="menu-header__list">
+									<li><a href="#" class="menu-header__link"><span class="icon-like"></span></a></li>
+									<li><a href="#" class="menu-header__link"><span class="icon-login"></span></a></li>
+									<li><a href="#" class="menu-header__link"><span class="icon-cart"></span>1</a></li>
+								</ul>
+							</div>
+							<div class="menu-header__icon">
+						    	<span></span>
+						    	<span></span>
+						    	<span></span>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__nav nav-main">
+				<div class="nav-main__top">
+					<div class="container">
+						<nav class="nav-main__body">
+							<ul class="nav-main__list">
+								<li><a href="#" class="nav-main__link active" data-lang = "nav-main_jewelry">Ювелирные изделия</a></li>
+								<li><a href="#" class="nav-main__link" data-lang = "nav-main_clock">часы</a></li>
+								<li><a href="#" class="nav-main__link" data-lang = "nav-main_aromas">ароматы</a></li>
+								<li><a href="#" class="nav-main__link" data-lang = "nav-main_brands">бренды</a></li>
+								<li><a href="#" class="nav-main__link" data-lang = "nav-main_leather">изделия из кожи</a></li>
+								<li><a href="#" class="nav-main__link" data-lang = "nav-main_bridal">Свадебные украшения</a></li>
+								<li><a href="#" class="nav-main__link" data-lang = "nav-main_another">другое</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="nav-main__main">
+					<div class="container">
+						<div class="nav-main__columns">
+							<div class="nav-main__column column">
+								<h3 class="column__title" data-lang = "nav-main-column-for">для кого</h3>
+								<ul class="column__list">
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-women">Для женщин</a></li>
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-men">Для мужчин</a></li>
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-child">Для детей</a></li>
+								</ul>
+							</div>
+							<div class="nav-main__column column">
+								<h3 class="column__title" data-lang = "nav-main-column-catg">Категории</h3>
+								<ul class="column__list">
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-ring">Кольца</a></li>
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-bracelet">Браслеты</a></li>
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-necklace">Колье</a></li>
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-earring">Серьги</a></li>
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-brooches">Броши</a></li>
+								</ul>
+							</div>
+							<div class="nav-main__column column">
+								<h3 class="column__title" data-lang = "nav-main-column-material">материал</h3>
+								<ul class="column__list">
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-diamond">Изделия <br/>с бриллиантами</a></li>
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-yellow">Желтое золото</a></li>
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-white">Белое золото</a></li>
+									<li><a href="#" class="column__link" data-lang = "nav-main-column-pink">Розовое золото</a></li>
+								</ul>
+							</div>
+							<div class="nav-main__column column">
+								<h3 class="column__title" data-lang = "nav-main-column-brand">бренд</h3>
+								<ul class="column__list">
+									<li><a href="#" class="column__link">Mercury</a></li>
+									<li><a href="#" class="column__link">Chopard</a></li>
+									<li><a href="#" class="column__link">Cartier</a></li>
+									<li><a href="#" class="column__link">Graff</a></li>
+									<li><a href="#" class="column__link">Garrard</a></li>
+								</ul>
+								<a href="#" class="column__item" data-lang = "nav-main-column-item">Показать все бренды</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav-main__footer footer-nav">
+					<div class="container">
+						<div class="footer-nav__body">
+							<div class="footer-nav__imageblock">
+								<p data-lang = "footer-nav_new">Новая коллекция by Mercury</p>
+								<h2>JUSTE UN CLOU</h2>
+								<a href="#" data-lang = "footer-nav_look">Cмотреть коллекцию <span class="icon-arrow"></span></a>
+							</div>
+							<div class="footer-nav__textblock">
+								<div class="footer-nav__contacts">
+									<h3 data-lang = "footer-nav_phone">телефон горячей линии</h3>
+									<a href="#">+7 800 456 456</a>
+									<div class="footer-nav__social">
+										<a href="#"><img src="img/icons/fb.svg" alt="Месседжер"></a>
+										<a href="#"><img src="img/icons/ig.svg" alt="Месседжер"></a>
+									</div>
+								</div>
+								<div class="footer-nav__subscribe">
+									<h3 data-lang = "footer-nav_subscribe">подпишитесь на новости</h3>
+									<form method = "get" action="#" autocomplete="on" class="form">
+										<input type="email" data-lang = "input_mail" value = "Введите E-mail" required>
+										<button type = "submit" class="icon-arrow btn"></button>
+									</form>
+									<div class="footer-nav__add">
+										<a href="#"><img src="img/icons/appstore.svg" alt="App-Store"></a>
+										<a href="#"><img src="img/google-play.png" alt="Google Play"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__body">
+				<div class="container">
+					<div class="main__content">
+						<div class="main__textblock">
+							<h1>HIGH JEWELRY</h1>
+							<a href="#" data-lang = "main__view">Смотреть коллекцию</a>
+						</div>
+						<div class="main__img">
+							<img src="img/img_main/01.png" alt="Кольцо Trinity">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__footer footer-main">
+				<div class="container">
+					<div class="footer-main__body">
+						<div class="footer-main__langs">
+							<button	 data-btn = 'ru'>RU</button>
+							<button  data-btn = 'en'>EN</button>
+						</div>
+						<div class="footer-main__textblock">
+							<h3><a href="#" data-lang = "footer-main_ring">КОЛЬЦО TRINITY, Cartier</a></h3>
+							<p data-lang = "footer-main_gold">Белое золото, бриллианты</p>
+							<span>498 000 ₽</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="section__body">
+					<div class="section__column">
+						<p data-lang = "section_column">Перейти в раздел</p>
+						<a href="#" data-lang = "section_column_men">Для мужчин</a>
+					</div>
+					<div class="section__column">
+						<p data-lang = "section_column">Перейти в раздел</p>
+						<a href="#" data-lang = "section_column_women">Для женщин</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="address">
+			<div class="container">
+				<div class="address__body">
+					<div class="address__textblock">
+						<h2 data-lang = "address_find">Найди <br/> бутик около себя</h2>
+						<p  data-lang = "address_write">Введите свой адрес и узнайте о самых ближайших бутиках к вам</p>
+						<form method = "get" action="#" autocomplete="on" class = "form">
+							<input type="text"  data-lang = "address_input" value = "Введите адрес" required>
+							<button type = "submit" class="icon-arrow btn"></button>
+						</form>
+					</div>
+					<div class="address__mapblock">
+						<div class = "address__map" id="map"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="jewelry">
+			<div class="container">
+				<div class="jewelry__body">
+					<div class="jewelry__item">
+						<div class="jewelry__img">
+							<img src="img/img_jewelry/01.png" alt="Кольцо Jow's">
+						</div>
+						<div class="jewelry__textblock">
+							<a href="#" data-lang = "jewelry_Jow">КОЛЬЦО jow’s, Cartier</a>
+							<p data-lang = "jewelry_Jow_desc">Белое золото, бриллианты</p>
+							<span>674 000 ₽</span>
+						</div>
+					</div>
+					<div class="jewelry__item">
+						<div class="jewelry__textblock">
+							<a href="#" data-lang = "jewelry_Etoile">КОлье etoile, HUBLOT</a>
+							<p data-lang = "jewelry_Etoile_desc">Белое золото, бриллианты</p>
+							<span>539 000 ₽</span>
+						</div>
+					</div>
+					<div class="jewelry__item">
+						<div class="jewelry__img">
+							<img src="img/img_jewelry/03.png" alt="Серьги Moon">
+						</div>
+						<div class="jewelry__textblock">
+							<a href="#" data-lang = "jewelry_Moon">Серьги moon, HUBLOT</a>
+							<p data-lang = "jewelry_Moon_desc">Желтое золото, сапфир</p>
+							<span>498 000 ₽</span>
+						</div>
+					</div>
+					<div class="jewelry__item">
+						<div class="jewelry__img">
+							<img src="img/img_jewelry/04.png" alt="Кольцо Croix">
+						</div>
+						<div class="jewelry__textblock">
+							<a href="#" data-lang = "jewelry_Croix">КОЛЬЦО croix, Cartier</a>
+							<p data-lang = "jewelry_Croix_desc">Желтое, белое, розовое золото</p>
+							<span>432 000 ₽</span>
+						</div>
+					</div>
+					<div class="jewelry__item">
+						<div class="jewelry__img">
+							<img src="img/img_jewelry/05.png" alt="Серьги Win">
+						</div>
+						<div class="jewelry__textblock">
+							<a href="#" data-lang = "jewelry_Win">серьги win, BLANCPAIN</a>
+							<p data-lang = "jewelry_Win_desc">Желтое золото, жемчуг</p>
+							<span>398 000 ₽</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="social">
+			<div class="container">
+				<div class="social__body swiper-container">
+					<div class="social__title">
+						<h3 data-lang = "social_title">Мы<br/>в социальных сетях</h3>
+					</div>
+					<div class="social__slider swiper-wrapper">
+						<div class="social__slide swiper-slide"><img src="img/img_social/01.jpg" alt="Изображение из галлереи"></div>
+						<div class="social__slide swiper-slide"><img src="img/img_social/02.jpg" alt="Изображение из галлереи"></div>
+						<div class="social__slide swiper-slide"><img src="img/img_social/03.jpg" alt="Изображение из галлереи"></div>
+						<div class="social__slide swiper-slide"><img src="img/img_social/04.jpg" alt="Изображение из галлереи"></div>
+						<div class="social__slide swiper-slide"><img src="img/img_social/05.jpg" alt="Изображение из галлереи"></div>
+					</div>
+					<div class="social__items">
+						<div class="social__contacts">
+							<a href="#"><img src="img/icons/fb.svg" alt="Месседжер"></a>
+							<a href="#"><img src="img/icons/ig.svg" alt="Месседжер"></a>
+						</div>
+						<div class="social__group">
+							<span class="social__prev icon-arrow"></span>
+							<div class="social__pagination swiper-pagination"></div>
+							<span class="social__next icon-arrow"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="subscribe">
+			<div class="container">
+				<div class="subscribe__body">
+					<div class="subscribe__imgblock"></div>
+					<div class="subscribe__textblock">
+						<div class="subscribe__contentblock">
+							<h3 data-lang = "subscribe_phone">телефон флагманского магазина</h3>
+							<a href="#">+7 800 456 456</a>
+						</div>
+						<div class="subscribe__contentblock">
+							<h3 data-lang = "subscribe_write">подпишитесь на новости</h3>
+							<form action="#" method="get" autocomplete="on" class = "form">
+								<input type="email"  data-lang = "input_mail"value = "Введите E-mail" required>
+								<button type = "submit" class="icon-arrow"></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="footer__body">
+					<div class="footer__titleblock">
+						<ul class="footer__list">
+							<li><a href="#" class="footer__link" data-lang = "footer_work">работа в компании</a></li>
+							<li><a href="#" class="footer__link" data-lang = "footer_use">условия пользования</a></li>
+							<li><a href="#" class="footer__link" data-lang = "footer_output">выходные данные</a></li>
+							<li><a href="#" class="footer__link" data-lang = "footer_policy">политика конфиденциальности</a></li>
+							<li><a href="#" class="footer__link" data-lang = "footer_map">карта сайта</a></li>
+						</ul>
+					</div>
+					<div class="footer__contentblock">
+						<div class="footer__logo"><a href="#"><img id="header__img" src="img/logo-white.svg" alt="Логотип"></a></div>
+						<div class="footer__column">
+							<h3 data-lang = "footer_phone">телефон горячей линии</h3>
+							<p>+7 800 456 456</p>
+							<a href="#"><img src="img/icons/fb.svg" alt="Месседжер"></a>
+							<a href="#"><img src="img/icons/ig.svg" alt="Месседжер"></a>
+						</div>
+						<div class="footer__column">
+							<h3 data-lang = "footer_subscribe">подпишитесь на новости</h3>
+							<form action="#" method="get" autocomplete="on" class = "form">
+								<input type="email" data-lang = "input_mail" value = "Введите E-mail" required>
+								<button type = "submit" class="icon-arrow btn"></button>
+							</form>
+							<a href="#"><img src="img/icons/appstore.svg" alt="App-Store"></a>
+							<a href="#"><img src="img/google-play.png" alt="Google Play"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--Скрипты-->
+	<script type="module" src='js/script.js'></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>

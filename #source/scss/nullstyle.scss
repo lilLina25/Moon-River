@@ -1,0 +1,106 @@
+//<Подключение шрифтов>
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+@font-face {
+	font-family: "FuturaPTBook";  
+	src: url("../fonts/futura-pt-book.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+}
+@font-face {
+	font-family: "FuturaPTDemi";  
+	src: url("../fonts/futura-pt-demi.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+}
+@font-face {
+	font-family: "FuturaPTLight";  
+	src: url("../fonts/futura-pt-light.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+}
+@font-face {
+	font-family: "FuturaPTMedium";  
+	src: url("../fonts/futura-pt-medium.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+}
+@font-face {
+	font-family: "SegoeUIItalic";  
+	src: url("../fonts/segoe-ui-italic.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+}
+@font-face {
+	font-family: "SegoeUILightItalic";  
+	src: url("../fonts/segoe-ui-light-italic.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal;
+}
+//<Шрифт по умолчанию>
+$fontfamily:"FuturaPTBook";//400
+
+//<Другие шрифты по частоте использования на странице>
+$futuralight:"FuturaPTLight";//300
+$futuramedium:"FuturaPTMedium";//450
+$forum:"Forum";//400
+$segoe:"SegoeUIItalic";
+$segoelight:"SegoeUILightItalic";//300
+$futurademi:"FuturaPTDemi";//600
+
+//<Переменные>
+$minwidth: 320px;
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	min-width: $minwidth;
+	position: relative;
+	width:100%;
+	color: #FFF;
+	background-color: #FFF;
+}
+body{
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	font-family: $fontfamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:$fontfamily;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+//<Стилизация скроллбара>
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #5D5D5D;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #1C1C1C;
+}
